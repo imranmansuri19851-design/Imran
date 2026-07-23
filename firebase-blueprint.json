@@ -1,0 +1,123 @@
+{
+  "entities": {
+    "students": {
+      "title": "Students",
+      "description": "Student registration profiles and learning parameters",
+      "type": "document",
+      "path": "students/{studentId}",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "standard": { "type": "number" },
+        "school": { "type": "string" },
+        "medium": { "type": "string" },
+        "age": { "type": "number" },
+        "learningStyle": { "type": "string" },
+        "targetMarks": { "type": "string" },
+        "selectedSubject": { "type": "string" },
+        "streakDays": { "type": "number" },
+        "totalQuestionsAnswered": { "type": "number" },
+        "totalMarksEarned": { "type": "number" },
+        "plan": { "type": "string" },
+        "referralCode": { "type": "string" },
+        "bonusDaysEarned": { "type": "number" }
+      }
+    },
+    "parents": {
+      "title": "Parents",
+      "description": "Parent accounts linked to students",
+      "type": "document",
+      "path": "parents/{parentId}",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "studentId": { "type": "string" }
+      }
+    },
+    "teachers": {
+      "title": "Teachers",
+      "description": "Teacher accounts and credentials",
+      "type": "document",
+      "path": "teachers/{teacherId}",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "school": { "type": "string" }
+      }
+    },
+    "subscriptions": {
+      "title": "Subscriptions",
+      "description": "Subscription transactions and payment status",
+      "type": "document",
+      "path": "subscriptions/{subId}",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "planType": { "type": "string" },
+        "gateway": { "type": "string" },
+        "amount": { "type": "number" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "coupons": {
+      "title": "Coupons",
+      "description": "Discount codes and promotional vouchers",
+      "type": "document",
+      "path": "coupons/{couponId}",
+      "properties": {
+        "id": { "type": "string" },
+        "code": { "type": "string" },
+        "discountPercent": { "type": "number" },
+        "planUpgrade": { "type": "string" },
+        "active": { "type": "boolean" }
+      }
+    },
+    "chapters": {
+      "title": "Chapters",
+      "description": "NCERT subject chapters created by teachers or preloaded",
+      "type": "document",
+      "path": "chapters/{chapterId}",
+      "properties": {
+        "id": { "type": "string" },
+        "standard": { "type": "number" },
+        "subject": { "type": "string" },
+        "chapterNumber": { "type": "number" },
+        "titleGujarati": { "type": "string" },
+        "titleEnglish": { "type": "string" }
+      }
+    },
+    "questions": {
+      "title": "Questions",
+      "description": "NCERT practice questions with key points and model answers",
+      "type": "document",
+      "path": "questions/{questionId}",
+      "properties": {
+        "id": { "type": "string" },
+        "chapterId": { "type": "string" },
+        "standard": { "type": "number" },
+        "subject": { "type": "string" },
+        "questionTextGujarati": { "type": "string" },
+        "totalMarks": { "type": "number" },
+        "expectedKeyPoints": { "type": "array" },
+        "modelAnswer": { "type": "string" }
+      }
+    },
+    "practice_history": {
+      "title": "Practice History",
+      "description": "Student voice answer evaluations and scores",
+      "type": "document",
+      "path": "practice_history/{historyId}",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "questionId": { "type": "string" },
+        "earnedMarks": { "type": "number" },
+        "totalMarks": { "type": "number" },
+        "studentTranscript": { "type": "string" }
+      }
+    }
+  }
+}

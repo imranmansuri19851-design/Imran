@@ -1,0 +1,12 @@
+name: answer_coach_ai
+description: "I M MASTER Answer AI - Voice AI Answer Evaluation Engine created by IMRAN MANSURI"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+flutter:
+  assets:
+    - assets/
+    - assets/imran_mansuri.png
+    - assets/imran_mansuri.svg

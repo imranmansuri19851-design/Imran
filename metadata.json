@@ -1,0 +1,10 @@
+{
+  "name": "I M MASTER Answer AI",
+  "description": "An AI-powered voice answer evaluation app for Std 6, 7 & 8 NCERT students by IMRAN MANSURI.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
